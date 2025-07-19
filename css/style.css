@@ -1,0 +1,528 @@
+/* Applies to all elements */
+* {
+    box-sizing: border-box; /* Reset box-sizing for all elements */
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
+}
+
+:root {
+    --primary-color: #9B887B;
+    --secondary-color: #2c1e18;
+    --light-color: #a56357;
+}
+
+body {
+    font-family: "Barlow";
+    font-size: 16px;
+    line-height: 1.5;    
+    overflow-x: hidden; /* Removes horizonal scroll bar at the bottom of screen*/
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--secondary-color);
+}
+
+/* Unordered List (UL) */
+ul {
+    list-style: none; /* Remove default bullet points */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive and contained within div */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Nav Bar */
+.navbar {
+    padding: 20px;
+    background: var(--primary-color);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-evenly; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar .main-menu ul {
+    display: flex; /* Display menu items in a row */
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s; /* Smooth transition for hover effect */
+}
+
+.navbar ul li a:hover {
+    color: #695a50;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+/* Hero */
+.hero {
+    padding: 40px 30px 50px 30px;
+    background: var(--primary-color)
+}
+
+.hero .container {
+    background: url('../assets/hero-bg.png') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 800px;
+}
+
+.hero .hero-content {
+    width: 80%; /* Width of hero title (70% of the container*/
+}
+
+.hero .hero-text {
+    width: 80%; /* Width of hero text (70% of the title) */
+    margin-bottom: 20px; /* Margin bottom of text for spacing before buttons*/
+}
+
+/* Video */
+
+.video {
+    padding: 30px 0 40px;
+}
+
+.video .video-content {
+    display: flex;
+    flex-direction: column; /* Stack video and text vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.video .video-preview {
+    margin-bottom: 20px;
+}
+
+/* Projects */
+.projects {
+    padding: 40px 0;
+}
+
+.projects .projects-heading {
+    width: 700px;
+    margin-bottom: 40px;
+    color: var(--secondary-color)
+}
+
+.projects .projects-grid {
+    display: grid;
+        grid-gap: 16px;
+        padding: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with minimum column width of 300px, makes it scroll horizontally*/
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(300px, 1fr);
+        overflow-x: auto;
+}
+
+.projects .card p:nth-child(2) { 
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Pricing */
+.pricing {
+    padding: 50px 0;
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pricing .pricing-card-subheading {
+    margin-bottom: 30px;
+}
+
+.pricing .pricing-card-price {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.pricing ul {
+    margin: 30px 0;
+}
+
+.pricing ul li {
+    margin-bottom: 20px;
+}
+
+.pricing ul li i {
+    margin-right: 10px;
+}
+
+.pricing .pricing-footer {
+    margin: 30px 0;
+}
+
+/* FAQ */
+.faq {
+    padding: 40px 0;
+}
+
+.faq .faq-group {
+    border-bottom: 1px solid #2c1e18;
+    padding-bottom: 20px;
+}
+
+.faq .faq-group .faq-group-header {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    position: relative; /* Position of icon relative to header*/
+}
+
+.faq .faq-group .faq-group-header h4 {
+    font-weight: 600;
+    width: 95%; /* So that header does not run into icon */
+}
+
+.faq .faq-group .faq-group-header i {
+    position: absolute;
+    right: 0; /* Position icon all the way to the right of header */
+    top: 35px; /* Center icon vertically next to header*/
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.faq .faq-group .faq-group-body {
+    display: none;
+}
+
+.faq .faq-group .faq-group-body.open { /*Display textonly if open*/
+    display: block;
+}
+
+.faq ul.faq-menu {
+    max-width: 400px;
+    margin: auto; /* Center the FAQ menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.faq ul.faq-menu li.active {
+    background: #695a50;
+    color: var(--primary-color)
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    line-height: 2.5; /* Increase line height for better readability */
+}
+
+.footer a {
+    color: var(--primary-color)
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Three columns: first two take more space */;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .card {
+    margin: 20px 30px, 30px, 0;
+}
+
+.footer input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #695a50;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: 0 auto; /* Center the container "0 top and bottom, auto left and right"*/
+    padding: 0 30px; /* Add horizontal padding "0 top and bottom, 15px on the left and right*/
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add horizontal padding */
+}
+
+/* Card */
+.card {
+    background: #9B887B;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block; 
+    padding: 10px 20px;
+    background: #695a50;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+    font-family: "Barlow";
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-light {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-dark {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Text Classes */
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+    font-family: "Aboreto"; /* Specific font for this size */
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+    font-family: "Aboreto";
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+    font-family: "Barlow";
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+    font-family: "Barlow";
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+    font-family: "Barlow";
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Background */
+.bg-primary {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.bg-dark {
+    background: var(--secondary-color);
+    color: var(--primary-color)
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: var(--secondary-color);
+}
+
+/* Hamburger Button */
+.hamburger-button {
+    display: none; /* Hidden by default */
+    cursor: pointer; 
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #695a50;
+    margin: 6px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start off-screen */
+    width: 250px;
+    height: 100%; /* Full height */
+    z-index: 100;
+    background: var(--primary-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out; /* Smooth transition for sliding in */
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+
+/* Media Queries */
+/* adds specific css for specific ranges of screen sizes*/
+
+/* This will run if the screen size is under 960px */
+@media (max-width: 960px) {
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 670px) {
+    .navbar .main-menu {
+        display: none; /* Hide the main menu on smaller screens */
+    }
+
+    .navbar .hamburger-button {
+        display: block; /* Show the hamburger button on smaller screens */
+    }
+
+    .hero .container {
+        background: url('../assets/hero-bg-mobile.png') no-repeat;
+        background-size: 350px; /* Might require experimentation with different images*/
+        background-position: bottom;
+        height: 1200px;
+    }
+
+    .hero .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero .hero-buttons .btn {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .projects .projects-heading {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* .projects .projects-grid {
+        grid-template-columns: 1fr;
+    } */
+
+    .pricing .pricing-grid, .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .card {
+        margin-right: 0;
+    }
+
+    .footer .footer-grid > div {
+        text-align: center;
+    }
+
+    /* Text */
+    .text-xl {
+        font-size: 1.9rem;
+    }
+
+    .text-lg {
+        font-size: 1.5rem;
+    }
+
+    .text-md {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+@media(max-width: 500px) {
+    .text-xxl {
+        font-size: 2rem;
+    }
+}
+
+
