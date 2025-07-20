@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 
     <!-- Body font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +32,7 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Main Navigation Bar -->
     <nav class="navbar">
         <!-- keeps navbar contained and not run to edge of screen -->
         <div class="container">
@@ -46,10 +53,10 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#">About Me</a>
+                        <a href="#about">About Me</a>
                     </li>
                     <li>
-                        <a href="#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
                         <a class="btn btn-dark" href="#">
@@ -73,10 +80,10 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#">About Me</a>
+                        <a href="#about">About Me</a>
                     </li>
                     <li>
-                        <a href="#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
                         <a class="btn btn-dark" href="#">
@@ -114,85 +121,326 @@
                     <a href="#" class="btn btn-light">Book a Demo</a>
                 </div>
             </div>
+
+            <div>
+                <img src="assets/graduationPhoto.jpg" alt="Photo of Kirana Irfano">
+            </div>
         </div>
     </section>
 
-    <!-- Video Section -->
-     <section class="video bg-dark">
+    <!-- About Section -->
+     <section id="about" class="about bg-dark">
         <div class="container-sm">
-            <h2 class="video-heading text-xl text-center">
-                See my projects in action
+            <h2 class="about-heading text-xxl text-center">
+                Me in a nutshell
             </h2>
-            <div class="video-content">
-                <a href="#">
-                    <img src="assets/video-preview.png" alt="video" class="video-preview">
-                </a>
+            <!-- Menu -->
+            <ul class="about-menu">
+                <li class="active" data-section="education">Education</li>
+                <li data-section="experience">Experience</li>
+                <li data-section="coursework">Coursework</li>
+            </ul>
+            <div class="about-content">
+                <!-- Education -->
+                <div class="about-group open" data-section="education">
+                    <div class="about-education">
+                        <div class="about-education-header">
+                            <h3 class="text-lg">M.Sc Computer Science</h3>
+                            <i class="fas fa-minus"></i>
+                            <h4 class="text-md">Colorado School of Mines</h4>
+                        </div>
+                        <div class="about-education-body open">
+                            <P>GPA: 3.96</P>
+                            <p>Memberships: Society of Women Engineers (SWE), Society of Asian Scientists and Engineers (SASE), Indonesian Student
+                                Association (ISA)</p>
+                            <p>Honors and Awards: Summa Cum Laude, Presidential Merit Scholarship Recipient, Dean’s List</p>
+                        </div>
+                    </div>
 
-                <a href="#" class="btn btn-primary">Get Started</a>
+                    <div class="about-education">
+                        <div class="about-education-header">
+                            <h3 class="text-lg">B.Sc Computer Science - Data Science Specialty</h3>
+                            <i class="fas fa-plus"></i>
+                            <h4 class="text-md">Colorado School of Mines</h4>
+                        </div>
+                        <div class="about-education-body">
+                            <P>GPA: 3.95</P>
+                            <p>Memberships: Society of Women Engineers (SWE), Society of Asian Scientists and Engineers (SASE), Indonesian Student
+                                Association (ISA)</p>
+                            <p>Honors and Awards: Summa Cum Laude, Presidential Merit Scholarship Recipient, Dean’s List, “Leadership by Design”
+                                Grandey Honors Program</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="about-group" data-section="experience">
+                    <div class="about-experience">
+                        <div class="about-experience-header">
+                            <h3 class="text-lg">Research Assistant</h3>
+                            <i class="fas fa-minus"></i>
+                            <h4 class="text-md">Aria Labs, Colorado School of Mines</h4>
+                        </div>
+                        <div class="about-experience-body">
+                            <li>
+                                Collaborate with hardware and autonomy team to integrate Robot Operating Systems (ROS) and autonomy algorithms to
+                                facilitate a robot tour guide for a campus environment.
+                            </li>
+                            <li>
+                                Leverage large language models to translate verbal commands into precise robotic actions using OpenAI’s Assistant API.
+                            </li>
+                            <li>
+                                Enhance natural language processing capabilities to improve robot-human interaction through speech to text recognition and wake word detection.
+                            </li>
+                        </div>
+                    </div>
+                    
+                    <div class="about-experience">
+                        <div class="about-experience-header">
+                            <h3 class="text-lg">Software Engineer Intern</h3>
+                            <i class="fas fa-plus"></i>
+                            <h4 class="text-md">Ricoh</h4>
+                        </div>
+                        <div class="about-experience-body">
+                            <li>
+                                Led as Scrum Master to develop a multimodal chatbot in Python using generative AI and semantic search, reducing printer
+                                error lookup and issue resolution time for technicians to under 6 seconds.
+                            </li>
+                            <li>
+                                Utilized retrieval augmented generation (RAG) to process diverse documentation (PDFs, websites, images, videos, etc.),
+                                extract, chunk, and convert text into vector embeddings for a searchable database used as context for a large language model
+                                (LLM).
+                            </li>
+                            <li>
+                                Integrated OpenAI’s GPT-3.5 to generate comprehensive and concise responses from semantic search results to minimize
+                                error.
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="about-experience">
+                        <div class="about-experience-header">
+                            <h3 class="text-lg">Reservoir Data Analyst</h3>
+                            <i class="fas fa-plus"></i>
+                            <h4 class="text-md">PDC Energy/Chevron</h4>
+                        </div>
+                        <div class="about-experience-body">
+                            <li>
+                                Programmed regression-optimization model for supervised learning in Python to optimize EUR oil numbers.
+                            </li>
+                            <li>
+                                Applied linear regression and random forests models to predict EUR oil forecasts.
+                            </li>
+                            <li>
+                                Increased predicted oil production by ~5% using optimized solution while reducing 30+ hours of work to under 1 hour.
+                            </li>
+                            <li>
+                                Partnered with reservoir engineers to analyze a dataset of 120+ features and 50,000+ samples on well spacing and oil
+                                production.
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="about-experience">
+                        <div class="about-experience-header">
+                            <h3 class="text-lg">Administrative Assistant</h3>
+                            <i class="fas fa-plus"></i>
+                            <h4 class="text-md">Residence Life, Colorado School of Mines</h4>
+                        </div>
+                        <div class="about-experience-body">
+                            <li>
+                                Delivered high quality customer service to 350+ first-year students, handling inquiries/issues and managing check-ins.
+                            </li>
+                            <li>
+                                Created and maintained interpersonal relationships with university staff, residents, and other stakeholders.
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coursework -->
+                <div class="about-group" data-section="coursework">
+                    <div class="container">
+                        <div class="coursework-grid">
+                            <!-- Coursework Card 1 -->
+                            <div class="card bg-primary">
+                                <div class="coursework-card-header">
+                                    <h4 class="coursework-heading text-lg">
+                                        Undergraduate Coursework
+                                    </h4>
+                                </div> 
+                                <div class="course-work-subgroup">
+                                    <div class="coursework-subgroup-header">
+                                        <i class="fas fa-angle-down"></i>
+                                        <h4 class="text-md">Programming Courses</h4>
+                                    </div>
+                                    <div class="coursework-subgroup-body">
+                                        <ul>
+                                            <li>Advanced Software Engineering</li>
+                                            <li>Algorithms</li>
+                                            <li>Computer Organization</li>
+                                            <li>Data Structures</li>
+                                            <li>Introduction to Cryptography</li>
+                                            <li>Linux</li>
+                                            <li>Operating Systems</li>
+                                            <li>Programming Concepts</li>
+                                            <li>Programming Languages</li>
+                                            <li>Software Engineering</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="course-work-subgroup">
+                                    <div class="coursework-subgroup-header">
+                                        <i class="fas fa-angle-right"></i>
+                                        <h4 class="text-md">Data Science Courses</h4>
+                                    </div>
+                                    <div class="coursework-subgroup-body">
+                                        <ul>
+                                            <li>Artificial Intelligence</li>
+                                            <li>Data Science</li>
+                                            <li>Database Management</li>
+                                            <li>Introduction to Machine Learning</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="course-work-subgroup">
+                                    <div class="coursework-subgroup-header">
+                                        <i class="fas fa-angle-right"></i>
+                                        <h4 class="text-md">Math and Statistics Courses</h4>
+                                    </div>
+                                    <div class="coursework-subgroup-body">
+                                        <ul>
+                                            <li>Discrete Math</li>
+                                            <li>Introduction to Mathematical Statistics</li>
+                                            <li>Introduction to Probability</li>
+                                            <li>Linear Algebra</li>
+                                            <li>Multivariate Analysis</li>
+                                            <li>Statistical Modeling</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                    
+                            <!-- Pricing Card 2 -->
+
+                            <div class="card bg-light">
+                                <div class="coursework-card-header">
+                                    <h4 class="coursework-heading text-lg">
+                                        Undergraduate Coursework
+                                    </h4>
+                                </div>
+                                <div class="course-work-subgroup">
+                                    <div class="coursework-subgroup-header">
+                                        <i class="fas fa-angle-down"></i>
+                                        <h4 class="text-md">All Courses</h4>
+                                    </div>
+                                    <div class="coursework-subgroup-body">
+                                        <ul>
+                                            <li>Advanced Computer Architecture</li>
+                                            <li>Advanced Data Science</li>
+                                            <li>Advanced Elements of Game Development</li>
+                                            <li>Advanced Machine Learning</li>
+                                            <li>Bioinformatics</li>
+                                            <li>Computer Vision</li>
+                                            <li>Theory of Computation</li>
+                                            <li>Quantum Programming</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </div>
+
         </div>
      </section>
 
-     <!-- Projects -->
-    <section class="projects bg-light">
+     <!-- Skills -->
+    <section id="projects" class="projects bg-light">
         <div class="container">
             <h3 class="projects-heading text-xl">
-                Click to see my projects
+                Click to see my skills
             </h3>
             <div class="projects-grid">
                 <!-- Card 1 -->
                 <div class="card">
+                    <div class="skill-card-header">
+                        <i class="fas fa-laptop"></i>
+                        <p>
+                            Programming Languages
+                        </p>
+                    </div>
+                    
                     <p>
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                    </p>
-                    <p>
-                        PROJECT NAME
-                    </p>
-                    <p>
-                        skills used: python, javascript, html, css, etc.
+                        Python, SQL, C++, Javascript, Java, HTML, CSS, OCaml, Lisp
                     </p>
                 </div>
                 <!-- Card 2 -->
                 <div class="card">
+                    <div class="skill-card-header">
+                        <i class="fas fa-chart-line"></i>
+                        <p>
+                            Data Analysis
+                        </p>
+                    </div>
                     <p>
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                    </p>
-                    <p>
-                        PROJECT NAME
-                    </p>
-                    <p>
-                        skills used: python, javascript, html, css, etc.
+                        Pandas, Matplotlib, Excel, R, Seaborn
                     </p>
                 </div>
                 <!-- Card 3 -->
                 <div class="card">
+                    <div class="skill-card-header">
+                        <i class="fas fa-robot"></i>
+                        <p>
+                            Machine Learning and AI
+                        </p>
+                    </div>
                     <p>
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                    </p>
-                    <p>
-                        PROJECT NAME
-                    </p>
-                    <p>
-                        skills used: python, javascript, html, css, etc.
+                        Numpy, Scikit-learn, Tenserflow, PyTorch, OpenCV
                     </p>
                 </div>
                 <!-- Card  -->
                 <div class="card">
+                    <div class="skill-card-header">
+                        <i class="fas fa-database"></i>
+                        <p>
+                            Database Management
+                        </p>
+                    </div>
                     <p>
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                        project stuff project stuff project stuff project stuff project stuff project stuff
-                    </p>
-                    <p>
-                        PROJECT NAME
-                    </p>
-                    <p>
-                        skills used: python, javascript, html, css, etc.
+                        SQL, Database Design, Relational Databases, NoSQL Databases
                     </p>
                 </div>
 
+                <!-- Card  -->
+                <div class="card">
+                    <div class="skill-card-header">
+                        <i class="fas fa-code"></i>
+                        <p>
+                            Software Engineering
+                        </p>
+                    </div>
+                    <p>
+                        Git, Linux, BASH, Agile, Object-Oriented Design, Test-Driven Development
+                    </p>
+                </div>
+
+                <!-- Card  -->
+                <div class="card">
+                    <div class="skill-card-header">
+                        <i class="fas fa-users"></i>
+                        <p>
+                            Collaboration
+                        </p>
+                    </div>
+                    <p>
+                        Scrum, Git version control, Code Review, Peer programming, Jira, Trello, Technical Documentation
+                    </p>
+                </div>
             </div>
         </div>
     </section>

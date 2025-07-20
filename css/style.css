@@ -75,14 +75,24 @@ img {
 }
 
 .hero .container {
-    background: url('../assets/hero-bg.png') no-repeat;
-    background-size: contain;
-    background-position: center bottom;
     height: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hero img {
+    width: 500px;
+    margin: 50px 10px;
+    border-radius: 10px;
 }
 
 .hero .hero-content {
     width: 80%; /* Width of hero title (70% of the container*/
+}
+
+.hero .hero-content h1 {
+    color: var(--secondary-color);
 }
 
 .hero .hero-text {
@@ -90,46 +100,214 @@ img {
     margin-bottom: 20px; /* Margin bottom of text for spacing before buttons*/
 }
 
-/* Video */
+/* About */
 
-.video {
+.about {
     padding: 30px 0 40px;
 }
 
-.video .video-content {
+.about .about-content {
     display: flex;
     flex-direction: column; /* Stack video and text vertically */
     align-items: center; /* Center items horizontally */
 }
 
-.video .video-preview {
+.about .video-preview {
     margin-bottom: 20px;
 }
 
+.about ul.about-menu {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+
+.about ul.about-menu li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about ul.about-menu li.active {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.about .about-group {
+    display: none;
+}
+
+.about .about-group.open {
+    /*Display text only if open*/
+    display: block;
+}
+
+
+/* About Education */
+
+.about .about-education, 
+.about .about-experience {
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.about .about-education p, 
+.about .about-experience p {
+    padding: 10px 0;
+}
+
+.about .about-education .about-education-header,
+.about .about-experience .about-experience-header {
+    padding: 20px 0;
+    position: relative; /* Position of icon relative to header*/
+}
+
+.about .about-education .about-education-header h4,
+.about .about-experience .about-experience-header h4 {
+    font-family: "Barlow";
+    font-weight: 600;
+    width: 95%
+}
+
+.about .about-education .about-education-header i,
+.about .about-experience .about-experience-header i {
+    position: absolute;
+    right: 0; /* Position icon all the way to the right of header */
+    top: 50px; /* Center icon vertically next to header*/
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.about .about-education-body,
+.about .about-experience-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.about .about-education-body.open,
+.about .about-experience-body.open {
+    max-height: 500px; /* set high enough to fit full content */
+    opacity: 1;
+}
+
+/* About Experience */
+.about .about-experience-body.open li{
+    padding: 10px 0;
+}
+
+/* About Coursework */
+.about .coursework-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.about .course-work-subgroup {
+    margin-bottom: 20px;
+}
+
+.about .coursework-heading {
+    margin-top: 10px;
+}
+
+.about .coursework-grid ul {
+    margin: 20px 0;
+}
+
+.about .coursework-grid ul li {
+    margin-bottom: 10px;
+}
+
+.about .coursework-grid ul li i {
+    margin-right: 10px;
+    width: 5px;
+}
+
+.about .coursework-subgroup-header {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about .coursework-subgroup-header h4 {
+    font-family: "Barlow";
+    font-weight: 600;
+    margin: 0;
+}
+
+.about .coursework-subgroup-header i {
+    font-size: 1.5rem; /* Icon size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.about .course-work-subgroup .coursework-subgroup-body {
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.about .course-work-subgroup .coursework-subgroup-body.open {
+    /*Display text only if open*/
+    max-height: 500px;/* set high enough to fit full content */
+    opacity: 1;
+}
+
+
 /* Projects */
 .projects {
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .projects .projects-heading {
     width: 700px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: var(--secondary-color)
 }
 
 .projects .projects-grid {
     display: grid;
-        grid-gap: 16px;
-        padding: 16px;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with minimum column width of 300px, makes it scroll horizontally*/
-        grid-auto-flow: column;
-        grid-auto-columns: minmax(300px, 1fr);
-        overflow-x: auto;
+    grid-gap: 16px;
+    padding: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with minimum column width of 300px, makes it scroll horizontally*/
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(300px, 1fr);
+    overflow-x: auto;
+    padding: 0 0 50px 0;
 }
 
-.projects .card p:nth-child(2) { 
-    margin-top: 30px;
+/* .projects .card p:nth-child(1) { 
+    font-family: "Barlow";
+    margin-bottom: 30px;
     font-weight: bold;
+} */
+
+.projects .card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.projects .skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-family: "Barlow";
+    margin-bottom: 10px;
 }
 
 /* Pricing */
