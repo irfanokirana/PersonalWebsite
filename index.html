@@ -18,6 +18,13 @@
         href="https://fonts.googleapis.com/css2?family=Aboreto&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+        
     <!-- Body font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +36,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="css/style.css"> <!-- Link to external CSS file -->
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png">
 </head>
 <body>
     <!-- Main Navigation Bar -->
@@ -38,19 +45,16 @@
         <div class="container">
 
             <!-- Logo -->
-            <!-- 
-            div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="logo">
-                </a>
+            <div class="logo">
+                <a href="index.html">Kirana Irfano</a>
             </div> 
-            -->
+           
 
             <!-- Menu -->
             <div class="main-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
+                    <li class="active">
+                        <a href="#home">Home</a>
                     </li>
                     <li>
                         <a href="#about">About Me</a>
@@ -59,10 +63,7 @@
                         <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a class="btn btn-dark" href="#">
-                            <!-- <i class="fas fa-user"></i>  -->
-                            Log In
-                        </a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -85,12 +86,6 @@
                     <li>
                         <a href="#projects">Projects</a>
                     </li>
-                    <li>
-                        <a class="btn btn-dark" href="#">
-                            <!-- <i class="fas fa-user"></i>  -->
-                            Log In
-                        </a>
-                    </li>
                 </ul>
              </div>
 
@@ -99,11 +94,14 @@
     </nav>
 
     <!-- Hero -->
-    <section class="hero">
+    <section id="home" class="hero observe-section">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-heading text-xxl">
-                    Hi - I'm Kirana, I am a Data Analyst
+                <h2 class="hero-heading">
+                   I'M KIRANA, I'M A 
+                </h2>
+                <h1>
+                    Software Engineer.
                 </h1>
                 <p class="hero-text">
                     I'm currently pursuing my Master’s degree in Computer Science at the Colorado School of Mines, building on a solid
@@ -111,25 +109,26 @@
                     been driven by a passion for exploring the frontiers of technology, with hands-on experience in machine learning and
                     generative AI. I’ve contributed to diverse projects, from developing an interactive chatbot to deploying large language
                     models on robotic platforms like a robot dog.
-                    
+                </p>
+                <p class="hero-text">
                     Originally from Denver, Colorado, I’m also deeply connected to the outdoors. I’ve tackled 10 of Colorado’s famed
                     fourteeners and am an enthusiastic snowboarder—firmly in the camp that snowboarders are cooler than skiers! Balancing my
                     tech life with a full house, I’m a full-time student and a part-time “mom” to my two cats.
                 </p>
-                <div class="hero-buttons">
+                <!-- <div class="hero-buttons">
                     <a href="#" class="btn btn-dark">Get Started</a>
                     <a href="#" class="btn btn-light">Book a Demo</a>
-                </div>
+                </div> -->
             </div>
 
-            <div>
+            <div class="hero-img">
                 <img src="assets/graduationPhoto.jpg" alt="Photo of Kirana Irfano">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-     <section id="about" class="about bg-dark">
+     <section id="about" class="about bg-dark observe-section">
         <div class="container-sm">
             <h2 class="about-heading text-xxl text-center">
                 Me in a nutshell
@@ -178,7 +177,7 @@
                     <div class="about-experience">
                         <div class="about-experience-header">
                             <h3 class="text-lg">Research Assistant</h3>
-                            <i class="fas fa-minus"></i>
+                            <i class="fas fa-plus"></i>
                             <h4 class="text-md">Aria Labs, Colorado School of Mines</h4>
                         </div>
                         <div class="about-experience-body">
@@ -271,7 +270,7 @@
                                 </div> 
                                 <div class="course-work-subgroup">
                                     <div class="coursework-subgroup-header">
-                                        <i class="fas fa-angle-down"></i>
+                                        <i class="fas fa-angle-right"></i>
                                         <h4 class="text-md">Programming Courses</h4>
                                     </div>
                                     <div class="coursework-subgroup-body">
@@ -329,12 +328,12 @@
                             <div class="card bg-light">
                                 <div class="coursework-card-header">
                                     <h4 class="coursework-heading text-lg">
-                                        Undergraduate Coursework
+                                        Graduate Coursework
                                     </h4>
                                 </div>
                                 <div class="course-work-subgroup">
                                     <div class="coursework-subgroup-header">
-                                        <i class="fas fa-angle-down"></i>
+                                        <i class="fas fa-angle-right"></i>
                                         <h4 class="text-md">All Courses</h4>
                                     </div>
                                     <div class="coursework-subgroup-body">
@@ -360,12 +359,12 @@
      </section>
 
      <!-- Skills -->
-    <section id="projects" class="projects bg-light">
+    <section id="skills" class="skills bg-light">
         <div class="container">
-            <h3 class="projects-heading text-xl">
+            <h3 class="skills-heading text-xl">
                 Click to see my skills
             </h3>
-            <div class="projects-grid">
+            <div class="skills-grid">
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="skill-card-header">
@@ -445,11 +444,262 @@
         </div>
     </section>
 
-    <!-- Pricing -->
-     <section class="pricing bg-primary">
+    
+
+     <!-- Projects -->
+      <section id="projects" class="faq bg-primary observe-section">
+        <div class="container-sm">
+            <h3 class="text-xl text-center">
+                Projects
+            </h3>
+            <div class="faq-content">
+                <div class="faq-group">
+                    <div class="faq-group-header">
+                        <h4 class="text-md">
+                            Infinite Islands - Game Design
+                        </h4>
+                        <h3 class="text-sm">
+                            Skills Applied: Unity, Game Design, Game Development, Blender, C#
+                        </h3>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="faq-group-body open">
+                        <h3 class="text-sm">
+                            Description:
+                        </h3>
+                        <p class="text-sm">
+                            Infinite Islands is a 3D educational exploration game designed to teach kids about environmental crises and inspire
+                            sustainable actions through engaging gameplay. Built using Unity and C#, the game takes place in a fragmented,
+                            post-apocalyptic world where the player navigates floating islands impacted by pollution, deforestation, and climate
+                            change. Players complete quests, solve environmental challenges, and restore ecosystems while learning real-world
+                            solutions to pressing ecological issues. Infinite Islands blends storytelling and interactivity to create a fun and
+                            impactful learning experience that empowers young players to take part in protecting the planet.
+                        </p>
+                        <div class="faq-footer">
+                            <ul class="faq-menu">
+                                <a href="https://github.com/irfanokirana/Trash_Island"><li>Github</li></a>
+                                <a href="infiniteIslands.html"><li class="active">Read More</li></a>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-group">
+                    <div class="faq-group-header">
+                        <h4 class="text-md">
+                            Call Transcription Classifcation
+                        </h4>
+                        <h3 class="text-sm">
+                            Skills Applied: Data Analysis, Large Language Modeling (LLM), Python, BERT, Sentiment Analysis, Natural Language Processing, Word Tokenization and Embedding 
+                        </h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-group-body">
+                        <h3 class="text-sm">
+                            Description:
+                        </h3>
+                        <p class="text-sm">
+                            This project involved developing a machine learning pipeline to classify customer service call
+                            transcripts into specific cancellation reasons based on the conversation content. Using Python, natural language
+                            processing (NLP), and sentiment analysis, I preprocessed over 900 real-world telecom call transcripts to extract relevant
+                            features from the transcript and categorize reasons why customers were canceling their service. I fine-tuned classification models, embedded and tokenized the transcripts
+                            using BERT to accurately predict both primary and secondary cancellation reasons, such as
+                            pricing concerns, service dissatisfaction, or technical issues. This project emphasized model evaluation, feature
+                            engineering, and real-world application of NLP techniques to automate insights from customer interaction data.
+                        </p>
+                        <div class="faq-footer">
+                            <ul class="faq-menu">
+                                <li>Github</li>
+                                <a href="callTranscription.html"><li class="active">Read More</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="faq-group">
+                    <div class="faq-group-header">
+                        <h4 class="text-md">
+                            Generative AI and Semantic Search Chatbot
+                        </h4>
+                        <h3 class="text-sm">
+                            Skills Applied: Scrum, Agile, Python, Retrieval Augmented Generation (RAG), Semantic Search, Generative AI, Vector Embedding, Large Language Modeling (LLM), Multi-Modal
+                        </h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-group-body">
+                        <h3 class="text-sm">
+                            Description:
+                        </h3>
+                        <p class="text-sm">
+                            The application created in this project utilizes generative AI and semantic search to create a chatbot for users and
+                            printer technicians to ask about printer inquiries and find solutions to their problems quickly. This project is in
+                            collaboration with Ricoh and the industrial printers they produce. The large industrial printers Ricoh produces often
+                            require lengthy and detailed documentation that are difficult to navigate. Having to parse through the documentation to
+                            find maintenance and troubleshooting procedures can often take printer technicians several minutes and even hours to do.
+                            To speed up turnaround time for these repairs, our team has been assigned with the task to create an application for
+                            repair technicians that utilizes semantic search and large language modeling to allow users to easily search up error
+                            codes or ask about repair inquiries and receive a clear, concise, and comprehensible answer in under a few seconds.
+                        </p>
+                        <div class="faq-footer">
+                            <ul class="faq-menu">
+                                <a href="chatbot.html"><li class="active">Read More</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-group">
+                    <div class="faq-group-header">
+                        <h4 class="text-md">
+                            Oil Product Prediction and Optimization
+                        </h4>
+                        <h3 class="text-sm">
+                            Skills Applied: Python, Machine Learning, Multiple Linear Regression, Numpy, Pandas, SQL, Microsoft SQL Server, Data Analysis, Database Management
+                        </h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-group-body">
+                        <h3 class="text-sm">
+                            Description:
+                        </h3>
+                        <p class="text-sm">
+                            During my internship at PDC Energy, I was tasked with analyzing a 50-year dataset of oil production levels to identify
+                            key factors driving production increases. Collaborating with the reservoir engineering team, who had limited experience
+                            with data analysis and machine learning, I independently applied my classroom knowledge and self-guided study to develop
+                            effective analytical strategies. Although I received minimal guidance in data science, my supervisor provided invaluable
+                            insights into the oil and gas industry. To interpret the dataset effectively, I deepened my understanding of oil
+                            drilling and production processes, enabling me to recognize the significance of various features and values within the
+                            data.
+                        </p>
+                        <div class="faq-footer">
+                            <ul class="faq-menu">
+                                <a href="oilOptimization.html"><li class="active">Read More</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-group">
+                    <div class="faq-group-header">
+                        <h4 class="text-md">
+                            Robot Tour Guide
+                        </h4>
+                        <h3 class="text-sm">
+                            Skills Applied: Large Language Modeling (LLM) Generative AI, Natural Language Processing, Python, Docker, Speech to Text, Text to Speech, Wakeword Detection, Assistant APIs
+                        </h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-group-body">
+                        <h3 class="text-sm">
+                            Description:
+                        </h3>
+                        <p class="text-sm">
+                            This project was conducted in collaboration with Aria Labs Robotics at the Colorado School of Mines. The goal was to
+                            develop a robotic dog integrated with AI models to function as a campus tour guide. This project leverages OpenAI APIs,
+                            voice recognition technologies, and robust integration strategies to provide an interactive and intelligent user
+                            experience.
+                        </p>
+                        <div class="faq-footer">
+                            <ul class="faq-menu">
+                                <a href="robotTourGuide.html"><li class="active">Read More</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-group">
+                    <div class="faq-group-header">
+                        <h4 class="text-md">
+                            Study Flash Cards using LLMs
+                        </h4>
+                        <h3 class="text-sm">
+                            Skills Applied: Machine Learning, Flask, Large Language Modeling (LLM), Generative AI, Python 
+                        </h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-group-body">
+                        <h3 class="text-sm">
+                            Description:
+                        </h3>
+                        <p class="text-sm">
+                            This project leverages the power of AI and user-friendly interfaces to transform the studying experience, making it more
+                            efficient and engaging. Designed to simplify and enhance learning, the application allows users to create personalized
+                            flashcards from PDF documents and interact with them in an efficient and playful way.
+                        </p>
+                        <div class="faq-footer">
+                            <ul class="faq-menu">
+                                <a href="https://github.com/irfanokirana/LLM_Flash_Cards"><li>Github</li></a>
+                                <a href="studyFlashCard.html"><li class="active">Read More</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+    <footer id="contact" class="footer bg-dark observe-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="card bg-dark">
+                        <h3 class="text-xl">Contact Me</h4>
+                        <!-- <p class="text-sm">
+                            You can find my contact information here.
+                        </p>
+                        <form>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-light btn-block">Subscribe</button>
+                        </form> -->
+                        <a href="https://www.linkedin.com/in/kiranairfano"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/irfanokirana"><i class="fab fa-github"></i></a>
+                        <a href="mailto:irfanokirana@gmail.com"><i class="fas fa-envelope"></i></a>
+                        
+                    </div>
+
+                    
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <a href="mailto:irfanokirana@gmail.com">irfanokirana@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="tel:+13035474116">303-547-4116</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="assets/Files/Resume_KAI_SU25.pdf">Download Resume</a></li>
+                        <li><a href="https://www.linkedin.com/in/kiranairfano">LinkedIn</a></li>
+                        <li><a href="https://github.com/irfanokirana">Github</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Other</h4>
+                    <ul>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#projects">Recent Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Extra -->
+    <section class="pricing bg-primary">
         <div class="container-sm">
             <h3 class="pricing-heading text-xl text-center">
-                Pricing
+                projects
             </h3>
             <p class="pricing-subheading text-md text-center">
                 project stuff project stuff project stuff project stuff project stuff project stuff
@@ -457,7 +707,7 @@
             </p>
             <div class="pricing-grid">
                 <!-- Pricing Card 1 -->
-                 <div class="card bg-dark">
+                <div class="card bg-dark">
                     <div class="pricing-card-header">
                         <h4 class="pricing-heading text-xl">
                             Simple
@@ -473,19 +723,19 @@
                             *No credit card needed
                         </p>
                     </div>
-
+    
                     <div class="pricing-card-body">
                         <ul>
                             <li>
                                 <i class="fas fa-check"></i> <!-- Checkmark icon -->
                                 Real Time Monitoring
                             </li>
-
+    
                             <li>
                                 <i class="fas fa-check"></i>
                                 Real Time Monitoring
                             </li>
-
+    
                             <li>
                                 <i class="fas fa-check"></i>
                                 Real Time Monitoring
@@ -493,8 +743,8 @@
                         </ul>
                         <a href="#" class="btn btn-light btn-block">Get Started</a>
                     </div>
-                 </div>
-
+                </div>
+    
                 <!-- Pricing Card 2 -->
                 <div class="card bg-light">
                     <div class="pricing-card-header">
@@ -512,19 +762,19 @@
                             /month
                         </p>
                     </div>
-                
+    
                     <div class="pricing-card-body">
                         <ul>
                             <li>
                                 <i class="fas fa-check"></i> <!-- Checkmark icon -->
                                 Real Time Monitoring
                             </li>
-                
+    
                             <li>
                                 <i class="fas fa-check"></i>
                                 Real Time Monitoring
                             </li>
-                
+    
                             <li>
                                 <i class="fas fa-check"></i>
                                 Real Time Monitoring
@@ -539,136 +789,7 @@
                 project stuff project stuff project stuff project stuff project stuff project stuff
             </p>
         </div>
-     </section>
-
-     <!-- FAQ -->
-      <section class="faq bg-primary">
-        <div class="container-sm">
-            <h3 class="text-xl text-center">
-                Frequently Asked Questions
-            </h3>
-            <ul class="faq-menu">
-                <li class="active">All</li>
-                <li>Getting Started</li>
-                <li>Pricing</li>
-            </ul>
-            <div class="faq-content">
-                <div class="faq-group">
-                    <div class="faq-group-header">
-                        <h4 class="text-md">
-                            Project 1
-                        </h4>
-                        <i class="fas fa-minus"></i>
-                    </div>
-                    <div class="faq-group-body open">
-                        <p>
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-group">
-                    <div class="faq-group-header">
-                        <h4 class="text-md">
-                            Project 1
-                        </h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-group-body">
-                        <p>
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-group">
-                    <div class="faq-group-header">
-                        <h4 class="text-md">
-                            Project 1
-                        </h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-group-body">
-                        <p>
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-group">
-                    <div class="faq-group-header">
-                        <h4 class="text-md">
-                            Project 1
-                        </h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-group-body">
-                        <p>
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                            project stuff project stuff project stuff project stuff project stuff project stuff
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-    <footer class="footer bg-dark">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="card bg-dark">
-                        <h4>Contact Me</h4>
-                        <p class="text-sm">
-                            You can find my contact information here.
-                        </p>
-                        <form>
-                            <input type="email" id="email" placeholder="Enter your email" required>
-                            <button type="submit" class="btn btn-light btn-block">Subscribe</button>
-                        </form>
-                    </div>
-
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-github"></i>
-                </div>
-
-                <div>
-                    <h4>Contact</h4>
-                    <ul>
-                        <li>
-                            <a href="#">irfanokirana@gmail.com</a>
-                        </li>
-                        <li>
-                            <a href="#">303-547-4116</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Download Resume</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Github</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Other</h4>
-                    <ul>
-                        <li><a href="#">Research</a></li>
-                        <li><a href="#">Recent Projects</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    
+    </section>
 
     <script src="js/main.js"></script> <!-- Link to external JavaScript file -->
 </body>

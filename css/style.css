@@ -6,10 +6,24 @@
 }
 
 :root {
+    --primary-color: #f3edd5;
+    --secondary-color: #9B887B;
+    --dark-color: #695a50;
+    --light-color: #a56357;
+    --color-one: #2c1e18;
+    --color-two: #b3a791;
+    --color-three: #e3c8b4;
+}
+
+/* :root {
     --primary-color: #9B887B;
     --secondary-color: #2c1e18;
+    --dark-color: #695a50;
     --light-color: #a56357;
-}
+    --color-one: #f3edd5;
+    --color-two: #b3a791;
+    --color-three: #e3c8b4;
+} */
 
 body {
     font-family: "Barlow";
@@ -37,11 +51,21 @@ img {
 .navbar {
     padding: 20px;
     background: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.navbar .logo {
+    font-family: "Playfair Display";
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .navbar .container {
     display: flex;
-    justify-content: space-evenly; /* Space between logo and menu */
+    justify-content: space-between; /* Space between logo and menu */
     align-items: center; /* Center items vertically */
 }
 
@@ -68,43 +92,102 @@ img {
     margin-right: 10px;
 }
 
+.navbar .main-menu ul li.active a {
+    /* background: var(--secondary-color); */
+    color: var(--color-one);
+}
+
 /* Hero */
 .hero {
-    padding: 40px 30px 50px 30px;
+    padding: 0px 30px 50px 30px;
     background: var(--primary-color)
 }
 
 .hero .container {
-    height: 800px;
+    height: 700px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.hero img {
-    width: 500px;
-    margin: 50px 10px;
+.hero .hero-img img {
+    width: 400px;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.hero .hero-img {
+    position: relative;
+    display: inline-block;
+}
+
+.hero .hero-img::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-color);
+    z-index: 2;
     border-radius: 10px;
 }
+
+.hero .hero-img::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    /* Further offset */
+    left: 40px;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    /* Second shadow */
+    z-index: 1;
+    /* Lower z-index than ::before */
+    border-radius: 10px;
+}
+
 
 .hero .hero-content {
     width: 80%; /* Width of hero title (70% of the container*/
 }
 
+.hero .hero-content h2 {
+    color: var(--dark-color);
+    font-family: "Quicksand";
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin: 0;
+        
+}
+
 .hero .hero-content h1 {
     color: var(--secondary-color);
+    font-family: "Playfair Display";
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: Bold;
+    margin: 0;
 }
 
 .hero .hero-text {
     width: 80%; /* Width of hero text (70% of the title) */
-    margin-bottom: 20px; /* Margin bottom of text for spacing before buttons*/
+    margin: 20px 0; /* Margin bottom of text for spacing before buttons*/
 }
 
 /* About */
 
 .about {
-    padding: 30px 0 40px;
+    padding: 100px 0 100px;
 }
+
+/* .about .about-heading {
+    color: var(--color-one)
+} */
 
 .about .about-content {
     display: flex;
@@ -264,18 +347,18 @@ img {
 }
 
 
-/* Projects */
-.projects {
+/* Skills */
+.skills {
     padding: 30px 0;
 }
 
-.projects .projects-heading {
+.skills .skills-heading {
     width: 700px;
     margin-bottom: 30px;
     color: var(--secondary-color)
 }
 
-.projects .projects-grid {
+.skills .skills-grid {
     display: grid;
     grid-gap: 16px;
     padding: 16px;
@@ -283,7 +366,7 @@ img {
     grid-auto-flow: column;
     grid-auto-columns: minmax(300px, 1fr);
     overflow-x: auto;
-    padding: 0 0 50px 0;
+    padding: 0 0 60px 0;
 }
 
 /* .projects .card p:nth-child(1) { 
@@ -292,7 +375,7 @@ img {
     font-weight: bold;
 } */
 
-.projects .card {
+.skills .card {
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -301,13 +384,18 @@ img {
     text-align: center;
 }
 
-.projects .skill-card-header {
+.skills .skill-card-header {
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: bold;
     font-family: "Barlow";
     margin-bottom: 10px;
+    color: var(--color-one);
+}
+
+.skills p {
+    color: var(--color-one);
 }
 
 /* Pricing */
@@ -349,12 +437,16 @@ img {
 
 /* FAQ */
 .faq {
-    padding: 40px 0;
+    padding: 100px 0;
 }
 
 .faq .faq-group {
+    /* background: #695a50; */
     border-bottom: 1px solid #2c1e18;
     padding-bottom: 20px;
+    /* padding: 20px 20px; */
+    margin: 20px 0;
+    /* border-radius: 10px; */
 }
 
 .faq .faq-group .faq-group-header {
@@ -377,18 +469,30 @@ img {
 }
 
 .faq .faq-group .faq-group-body {
-    display: none;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
-.faq .faq-group .faq-group-body.open { /*Display textonly if open*/
-    display: block;
+.faq .faq-group .faq-group-body.open{
+    /*Display text only if open*/
+    max-height: 500px;
+    /* set high enough to fit full content */
+    opacity: 1;
+}
+
+.faq .faq-footer {
+    display: flex;
+    justify-content: flex-end; /* align menu to the right */
+    padding: 10px 0 0 0; /* space above the menu */
 }
 
 .faq ul.faq-menu {
     max-width: 400px;
-    margin: auto; /* Center the FAQ menu */
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     background: var(--primary-color);
     padding: 10px 20px;
@@ -401,10 +505,11 @@ img {
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
+    font-family: "Barlow";
 }
 
 .faq ul.faq-menu li.active {
-    background: #695a50;
+    background: var(--secondary-color);
     color: var(--primary-color)
 }
 
@@ -435,7 +540,6 @@ img {
     grid-template-columns: 2fr 1fr 1fr 1fr; /* Three columns: first two take more space */;
     gap: 30px;
     justify-content: center;
-    align-items: center;
 }
 
 .footer .card {
@@ -454,7 +558,7 @@ img {
 .container {
     max-width: 1100px;
     margin: 0 auto; /* Center the container "0 top and bottom, auto left and right"*/
-    padding: 0 30px; /* Add horizontal padding "0 top and bottom, 15px on the left and right*/
+    padding: 0 15px; /* Add horizontal padding "0 top and bottom, 15px on the left and right*/
 }
 
 .container-sm {
@@ -510,19 +614,19 @@ img {
 /* Text Classes */
 
 .text-xxl {
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 1.2;
     font-weight: 600;
     margin: 40px 0 20px;
-    font-family: "Aboreto"; /* Specific font for this size */
+    font-family: "Playfair Display"; /* Specific font for this size */
 }
 
 .text-xl {
-    font-size: 2.2rem;
+    font-size: 3rem;
     line-height: 1.4;
     font-weight: normal;
-    margin: 40px 0 20px;
-    font-family: "Aboreto";
+    margin: 20px 0 20px;
+    font-family: "Playfair Display";
 }
 
 .text-lg {
@@ -534,7 +638,7 @@ img {
 }
 
 .text-md {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.4;
     font-weight: normal;
     margin: 20px 0 10px;
@@ -542,8 +646,8 @@ img {
 }
 
 .text-sm {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.;
     font-weight: normal;
     margin: 10px 0 5px;
     font-family: "Barlow";
@@ -561,11 +665,11 @@ img {
 
 .bg-dark {
     background: var(--secondary-color);
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .bg-light {
-    background: var(--light-color);
+    background: var(--color-one);
     color: var(--secondary-color);
 }
 
@@ -638,7 +742,7 @@ img {
     }
 
     .hero .container {
-        background: url('../assets/hero-bg-mobile.png') no-repeat;
+        /* background: url('../assets/hero-bg-mobile.png') no-repeat; */
         background-size: 350px; /* Might require experimentation with different images*/
         background-position: bottom;
         height: 1200px;

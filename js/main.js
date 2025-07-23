@@ -1,3 +1,63 @@
+// Navbar active 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navBar = document.querySelector('.main-menu');
+    
+    navBar.addEventListener("click", (e) => {
+        // change the active button
+        const clickedButton = e.target.closest('li');
+        if (!clickedButton) return;
+        const allButtons = navBar.querySelectorAll('li');
+
+        allButtons.forEach(button => {
+            if (button == clickedButton) {
+                button.classList.add("active");
+            } else {
+                button.classList.remove("active");
+            }
+        });
+    });
+});
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const sections = document.querySelectorAll(".observe-section");
+//     const navLinks = document.querySelectorAll(".main-menu ul li a");
+
+//     // console.log(sections);
+
+//     const observer = new IntersectionObserver((entries) => {
+//         entries.forEach((entry) => {
+//             const id = entry.target.getAttribute("id");
+//             const link = document.querySelector(`.main-menu ul li a[href="#${id}"]`);
+
+//             console.log(id);
+//             console.log(link);
+
+//             if (entry.isIntersecting) {
+//                 console.log("got here");
+//                 navLinks.forEach(link => 
+//                     // link.parentElement.classList.remove("active")
+//                     console.log(link.parentElement)
+//                 );
+//                 if (link) link.parentElement.classList.add("active");
+//             }
+//         });
+//     },
+//     {
+//         rootMargin: "-50% 0px -50% 0px",
+//         threshold: 0.1,
+//     });
+
+//     // sections.forEach((section) => observer.observe(section));
+//     sections.forEach((section) => {
+//         console.log(`Observing section: ${section.id}`);
+//         observer.observe(section);
+//     });
+// });
+
+
+
+
 // FAQ Accordion
 document.addEventListener("DOMContentLoaded", () => {
     const faqContainer = document.querySelector('.faq-content');
